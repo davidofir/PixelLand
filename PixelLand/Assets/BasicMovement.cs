@@ -6,7 +6,7 @@ public class BasicMovement : MonoBehaviour
 {
     public Animator animator;
     Rigidbody2D rb;
-    float jumpPower = 8f;
+    float jumpForce = 2f;
     float speed = 5f;
     private SpriteRenderer sprite;
     private float dirX = 0.0f;
@@ -22,7 +22,7 @@ public class BasicMovement : MonoBehaviour
         MoveVertically();
         if (Input.GetButton("Jump"))
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+            rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
     }
     public void MoveVertically()
