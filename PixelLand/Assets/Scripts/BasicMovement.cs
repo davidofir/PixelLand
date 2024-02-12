@@ -6,7 +6,7 @@ public class BasicMovement : MonoBehaviour
 {
     public Animator animator;
     Rigidbody2D rb;
-    float jumpForce = 2f;
+    float jumpForce = 0.25f;
     float speed = 5f;
     private SpriteRenderer sprite;
     private float dirX = 0.0f;
