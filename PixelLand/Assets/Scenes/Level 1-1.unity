@@ -392,6 +392,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &680590146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680590136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb8e3af115a2824587fa0ab2fe6d55b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  playerHealth: {fileID: 1003830520}
 --- !u!1 &695732628 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6479607474253642469, guid: ce0cbabb34a64244fbed2fc0817aad6d, type: 3}
@@ -3853,6 +3867,25 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!1 &742741976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8587927282007631682, guid: 759a893a6c370d449b4c9a875d15813d, type: 3}
+  m_PrefabInstance: {fileID: 2171343567089320141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &742741978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742741976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb8e3af115a2824587fa0ab2fe6d55b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  playerHealth: {fileID: 0}
 --- !u!1 &1003830507 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6418500038843007890, guid: ce0cbabb34a64244fbed2fc0817aad6d, type: 3}
@@ -3884,6 +3917,34 @@ MonoBehaviour:
   jumpableGround:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &1003830519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003830507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75511f46cbb3378459be85dc2a182091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  health: 0
+--- !u!114 &1003830520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003830507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75511f46cbb3378459be85dc2a182091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  health: 0
 --- !u!1001 &1027451990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3982,6 +4043,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6418500038843007890, guid: ce0cbabb34a64244fbed2fc0817aad6d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1003830514}
+    - targetCorrespondingSourceObject: {fileID: 6418500038843007890, guid: ce0cbabb34a64244fbed2fc0817aad6d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1003830520}
+    - targetCorrespondingSourceObject: {fileID: 6418500038843007890, guid: ce0cbabb34a64244fbed2fc0817aad6d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1003830519}
   m_SourcePrefab: {fileID: 100100000, guid: ce0cbabb34a64244fbed2fc0817aad6d, type: 3}
 --- !u!1 &1096756223
 GameObject:
@@ -5595,9 +5662,15 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8587927282007631682, guid: 759a893a6c370d449b4c9a875d15813d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 742741978}
     - targetCorrespondingSourceObject: {fileID: 3762981956225865400, guid: 759a893a6c370d449b4c9a875d15813d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 680590140}
+    - targetCorrespondingSourceObject: {fileID: 3762981956225865400, guid: 759a893a6c370d449b4c9a875d15813d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 680590146}
     - targetCorrespondingSourceObject: {fileID: 3762981956225865400, guid: 759a893a6c370d449b4c9a875d15813d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 680590143}

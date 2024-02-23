@@ -12,6 +12,7 @@ public class BasicMovement : MonoBehaviour
     [SerializeField] private LayerMask jumpableGround;
     private SpriteRenderer sprite;
     private float dirX = 0.0f;
+    private int health = 3;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
