@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb8e3af115a2824587fa0ab2fe6d55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 1
   playerHealth: {fileID: 1003830520}
 --- !u!1 &695732628 stripped
 GameObject:
@@ -3965,6 +3965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 855870022}
   - component: {fileID: 855870023}
+  - component: {fileID: 855870024}
   m_Layer: 0
   m_Name: Heart 3
   m_TagString: Untagged
@@ -4025,8 +4026,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 173517067
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c3102d71f54ee7a48ba23bc55efafad6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4039,6 +4040,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &855870024
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855870021}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1003830507 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6418500038843007890, guid: ce0cbabb34a64244fbed2fc0817aad6d, type: 3}
@@ -4070,20 +4092,6 @@ MonoBehaviour:
   jumpableGround:
     serializedVersion: 2
     m_Bits: 0
---- !u!114 &1003830519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1003830507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75511f46cbb3378459be85dc2a182091, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 10
-  health: 0
 --- !u!114 &1003830520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4096,8 +4104,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75511f46cbb3378459be85dc2a182091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 6
   health: 0
+  hearts:
+  - {fileID: 1561838059}
+  - {fileID: 1310243117}
+  - {fileID: 855870021}
+  fullHeart: {fileID: 21300000, guid: c3102d71f54ee7a48ba23bc55efafad6, type: 3}
+  emptyHeart: {fileID: 21300000, guid: edceb1e424718fb45abb5f00c93065d8, type: 3}
+  halfHeart: {fileID: 21300000, guid: 1619a883d15ecbc4abb443ad7c3514f6, type: 3}
 --- !u!1001 &1027451990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4199,9 +4214,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6418500038843007890, guid: ce0cbabb34a64244fbed2fc0817aad6d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1003830520}
-    - targetCorrespondingSourceObject: {fileID: 6418500038843007890, guid: ce0cbabb34a64244fbed2fc0817aad6d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1003830519}
   m_SourcePrefab: {fileID: 100100000, guid: ce0cbabb34a64244fbed2fc0817aad6d, type: 3}
 --- !u!1 &1096756223
 GameObject:
@@ -4304,8 +4316,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 173517067
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c3102d71f54ee7a48ba23bc55efafad6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4515,8 +4527,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 173517067
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c3102d71f54ee7a48ba23bc55efafad6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4565,7 +4577,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.352605, y: -1.0387044}
+  m_AnchoredPosition: {x: 3.14, y: -0.67}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1855209071
