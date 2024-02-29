@@ -12,7 +12,10 @@ public class BasicMovement : MonoBehaviour
     [SerializeField] private LayerMask jumpableGround;
     private SpriteRenderer sprite;
     private float dirX = 0.0f;
-    private int health = 3;
+    public float KBForce;
+    public float KBCounter = 0;
+    public float KBTotalTime;
+    public bool KnockFromRight;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -32,7 +35,17 @@ public class BasicMovement : MonoBehaviour
     public void MoveVertically()
     {
         dirX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(dirX * speed, rb.velocity.y);
+        if (KBCounter < 0)
+        {
+            rb.velocity = new Vector2(dirX * speed, rb.velocity.y);
+        }
+        else
+        {
+            float horizontalForce = KnockFromRight ? -KBForce : KBForce;
+            rb.velocity = new Vector2(horizontalForce * 5, rb.velocity.y + 0.1f); // Apply horizontal knockback only
+            
+        }
+        KBCounter -= Time.deltaTime;
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {

@@ -22,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        GetComponent<BasicMovement>().KBCounter = 0.3f;
         health -= damage;
         UpdateHearts();
         if(health <= 0)
